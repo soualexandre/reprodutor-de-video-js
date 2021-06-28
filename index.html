@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Paulinho</title>
+    <style>
+        .container {
+            position: relative;
+            width: 640px;
+            height: 360px;
+        }
+
+        .controle {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .video {
+            width: 100%;
+        }
+        .btn {
+            position: relative;
+            top: 80%;
+            width: 50px;
+            padding: 10px;
+            transform: translateY(-100);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <video id="video1" class="video" src="./cd.mp4"></video>
+        <div class="controle" id="controls" onmouseover="mostrar(this)" onmouseout="esconder(this)">
+            <img class="btn" onclick="retroceder()" src="./img/skip-back.svg" alt="">
+            <img class="btn" onclick="avancar()" src="./img/skip-forward.svg" alt="">
+            <img class="btn" onclick="diminuir()" src="./img/decrease.svg" alt="">
+            <img class="btn" onclick="aumentar()" src="./img/increase.svg" alt="">
+            <img class="btn" onclick="pause()" src="./img/pause.svg" alt="">
+            <img class="btn" onclick="play()" src="./img/play-circle.svg" alt="">
+            <img class="btn" onclick="stop()" src="./img/stop.svg" alt="">
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
